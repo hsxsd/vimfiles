@@ -4,6 +4,14 @@ set hlsearch
 set incsearch
 inoremap jk <esc>
 
+"" 编辑模式下光标移动（模仿bash）
+inoremap <C-e> <esc>A
+inoremap <C-a> <esc>I
+inoremap <C-u> <esc>d0xi
+inoremap <C-k> <esc>ld$a
+inoremap <C-b> <esc>i
+inoremap <C-f> <esc>la
+inoremap <C-d> <esc>lxi
 
 "" Vundle设置
 set nocompatible              " be iMproved
@@ -25,6 +33,9 @@ Plugin 'honza/vim-snippets'
 
 " NerdTree
 Plugin 'scrooloose/nerdtree'
+
+" Emmet
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
